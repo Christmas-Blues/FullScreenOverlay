@@ -38,11 +38,11 @@ SwiftUI에서 [`ZStack`](https://developer.apple.com/documentation/swiftui/zstac
 
 ### 프레젠테이션 공간 설정하기
 
-FullScreenOverlay를 사용하려면 먼저 오버레이를 띄울 프레젠테이션 공간을 설정해야 합니다. 오버레이가 띄워지길 원하는 뷰(예: 최상위 루트 뷰)에 `fullScreenOverlayPresentationSpace(name:)` 모디파이어를 사용하여 프레젠테이션 공간과 그 이름을 설정합니다.
+FullScreenOverlay를 사용하려면 먼저 오버레이를 띄울 프레젠테이션 공간을 설정해야 합니다. 오버레이가 띄워지길 원하는 뷰(예: 최상위 루트 뷰)에 `fullScreenOverlayPresentationSpace(_:)` 모디파이어를 사용하여 프레젠테이션 공간과 그 이름을 설정합니다.
 
 ```swift
 RootView()
-    .fullScreenOverlayPresentationSpace(name: "RootView")
+    .fullScreenOverlayPresentationSpace(.named("RootView"))
 ```
 
 프레젠테이션 공간으로 사용하려는 뷰가 충분히 크지 않은 경우, [`frame(maxWidth:maxHeight:)`](https://developer.apple.com/documentation/swiftui/view/frame(minwidth:idealwidth:maxwidth:minheight:idealheight:maxheight:alignment:)) 모디파이어를 사용하여 뷰의 크기를 넓혀준 다음 모디파이어를 사용합니다.
@@ -50,7 +50,7 @@ RootView()
 ```swift
 FittingRootView()
     .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .fullScreenOverlayPresentationSpace(name: "FittingRootView")
+    .fullScreenOverlayPresentationSpace(.named("FittingRootView"))
 ```
 
 프레젠테이션 공간은 여러 곳이 될 수 있습니다. [`NavigationView`](https://developer.apple.com/documentation/swiftui/navigationview)를 사용하는 경우, [`NavigationLink`](https://developer.apple.com/documentation/swiftui/navigationlink)의 `destination` 뷰에 별도의 프레젠테이션 공간을 설정하면, 해당 `destination` 뷰 내부에서만 오버레이를 띄울 수 있습니다.
@@ -61,11 +61,11 @@ NavigationView {
         "Detail",
         destination: {
             DetailView()
-                .fullScreenOverlayPresentationSpace(name: "DetailView")
+                .fullScreenOverlayPresentationSpace(.named("DetailView"))
         }
     )
 }
-.fullScreenOverlayPresentationSpace(name: "NavigationView")
+.fullScreenOverlayPresentationSpace(.named("NavigationView"))
 ```
 
 `PresentationSpace.named(_:)`는 SwiftUI의 `CoordinateSpace.named(_:)`와 마찬가지로 `AnyHashable` 타입을 이름으로 받습니다. 따라서 `String`이 아니더라도 `Hashable`을 만족하는 타입이라면 어떤 것이든 이름이 될 수 있습니다.
@@ -76,7 +76,7 @@ extension RootView {
 }
 
 RootView()
-    .fullScreenOverlayPresentationSpace(name: RootView.PresentationSpaceName())
+    .fullScreenOverlayPresentationSpace(.named(RootView.PresentationSpaceName()))
 ```
 
 ### 오버레이 띄우기

@@ -58,6 +58,6 @@ internal struct SwiftUIView_Previews: PreviewProvider {
 
     static var previews: some View {
         RootView()
-            .fullScreenOverlayPresentationSpace(name: "RootView")
+            .fullScreenOverlayPresentationSpace(.named("RootView"))
     }
 }
