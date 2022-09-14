@@ -125,7 +125,7 @@ https://user-images.githubusercontent.com/2215080/172043362-8e0c5d6d-712f-4773-8
 [`Package.swift`](https://developer.apple.com/documentation/swift_packages/package) 파일의 `dependencies`에 아래 라인을 추가합니다.
 
 ```swift
-.package(url: "https://github.com/riiid/FullScreenOverlay.git", .upToNextMajor(from: "1.0.0"))
+.package(url: "https://github.com/riiid/FullScreenOverlay.git", .upToNextMajor(from: "1.1.0"))
 ```
 
 그 다음, `AttributedFont`를 타겟의 의존성으로 추가합니다.
@@ -144,7 +144,7 @@ import PackageDescription
 let package = Package(
     name: "MyPackage",
     dependencies: [
-        .package(url: "https://github.com/riiid/FullScreenOverlay.git", .upToNextMajor(from: "1.0.0"))
+        .package(url: "https://github.com/riiid/FullScreenOverlay.git", .upToNextMajor(from: "1.1.0"))
     ],
     targets: [
         .target(name: "MyTarget", dependencies: ["FullScreenOverlay"])
