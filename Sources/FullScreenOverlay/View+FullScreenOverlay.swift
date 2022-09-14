@@ -8,6 +8,11 @@ public extension View {
             .modifier(FullScreenOverlayPresenter(presentationSpace: .named(name)))
     }
 
+    func fullScreenOverlayPresentationSpace(_ presentationSpace: PresentationSpace) -> some View {
+        self
+            .modifier(FullScreenOverlayPresenter(presentationSpace: presentationSpace))
+    }
+
     @ViewBuilder func fullScreenOverlay<Overlay: View>(
         presentationSpace: PresentationSpace,
         @ViewBuilder content: () -> Overlay
