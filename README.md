@@ -1,3 +1,7 @@
+# ⚠️ DEPRECATED ⚠️
+This project is no longer maintained and will be continued from the original maintainer's repository 
+https://github.com/stleamist/FullScreenOverlay
+
 # FullScreenOverlay
 
 [![Build](https://github.com/riiid/FullScreenOverlay/actions/workflows/build.yml/badge.svg)](https://github.com/riiid/FullScreenOverlay/actions/workflows/build.yml)
