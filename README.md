@@ -1,6 +1,6 @@
 # FullScreenOverlay
 
-[![Build](https://github.com/riiid/FullScreenOverlay/actions/workflows/build.yml/badge.svg)](https://github.com/riiid/FullScreenOverlay/actions/workflows/build.yml)
+[![Build](https://github.com/Christmas-Blues/FullScreenOverlay/actions/workflows/build.yml/badge.svg)](https://github.com/Christmas-Blues/FullScreenOverlay/actions/workflows/build.yml)
 
 풀스크린 크기가 아닌 뷰에서 풀스크린 SwiftUI 오버레이를 띄우는 획기적인 방법.
 
@@ -104,7 +104,7 @@ SomeView()
 
 아래는 FullScreenOverlay를 사용하여 간단한 바텀시트 프레젠테이션을 구현한 예제입니다.
 
-https://github.com/riiid/FullScreenOverlay/blob/2b251c2d6da1fd7712ef0723e6d5b2110bbf5aeb/Sources/Previews/Previews.swift#L1-L63
+https://github.com/Christmas-Blues/FullScreenOverlay/blob/2b251c2d6da1fd7712ef0723e6d5b2110bbf5aeb/Sources/Previews/Previews.swift#L1-L63
 
 https://user-images.githubusercontent.com/2215080/172043362-8e0c5d6d-712f-4773-863f-50687e961a86.mp4
 
@@ -125,7 +125,7 @@ https://user-images.githubusercontent.com/2215080/172043362-8e0c5d6d-712f-4773-8
 [`Package.swift`](https://developer.apple.com/documentation/swift_packages/package) 파일의 `dependencies`에 아래 라인을 추가합니다.
 
 ```swift
-.package(url: "https://github.com/riiid/FullScreenOverlay.git", .upToNextMajor(from: "1.1.0"))
+.package(url: "https://github.com/Christmas-Blues/FullScreenOverlay.git", .upToNextMajor(from: "1.1.0"))
 ```
 
 그 다음, `AttributedFont`를 타겟의 의존성으로 추가합니다.
@@ -144,7 +144,7 @@ import PackageDescription
 let package = Package(
     name: "MyPackage",
     dependencies: [
-        .package(url: "https://github.com/riiid/FullScreenOverlay.git", .upToNextMajor(from: "1.1.0"))
+        .package(url: "https://github.com/Christmas-Blues/FullScreenOverlay.git", .upToNextMajor(from: "1.1.0"))
     ],
     targets: [
         .target(name: "MyTarget", dependencies: ["FullScreenOverlay"])
@@ -157,14 +157,14 @@ let package = Package(
 File > Swift Packages > Add Package Dependency를 선택한 다음, 아래의 URL을 입력합니다.
 
 ```
-https://github.com/riiid/FullScreenOverlay.git
+https://github.com/Christmas-Blues/FullScreenOverlay.git
 ```
 
 자세한 내용은 [Adding Package Dependencies to Your App](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app)을 참조하세요.
 
 ## 기여하기
 
-저희는 모든 종류의 기여를 환영하며, 기여해 주시는 분들의 모든 의견을 존중합니다. 간단한 기능 추가, 버그 픽스, 오타 수정 등이라도 주저하지 말고 [이슈](https://github.com/riiid/FullScreenOverlay/issues)나 [PR](https://github.com/riiid/FullScreenOverlay/pulls)을 생성하여 의견을 제기해 주세요.
+저희는 모든 종류의 기여를 환영하며, 기여해 주시는 분들의 모든 의견을 존중합니다. 간단한 기능 추가, 버그 픽스, 오타 수정 등이라도 주저하지 말고 [이슈](https://github.com/Christmas-Blues/FullScreenOverlay/issues)나 [PR](https://github.com/Christmas-Blues/FullScreenOverlay/pulls)을 생성하여 의견을 제기해 주세요.
 
 #### 메인테이너
 
